@@ -14,7 +14,7 @@
         <navigation v-if="isMobile" :isMobile="isMobile" :activeItem="activeItem" :activeGroup="activeGroup"
           @toggleGroup="toggleGroup" @doLogout="doLogout" />
         <b-navbar-item v-else tag="div">
-          <a href="#" @click.prevent="doLogout" class="logout-item">
+          <a href="#" @click.prevent="doLogout">
             {{ $t('users.logout') }}
           </a>
         </b-navbar-item>
@@ -34,7 +34,7 @@
       </section>
       <!-- sidebar-->
 
-      <!-- body //-->
+      <!-- body -->
       <div class="main">
         <div class="global-notices" v-if="serverConfig.needs_restart || serverConfig.update">
           <div v-if="serverConfig.needs_restart" class="notification is-danger">
@@ -103,14 +103,14 @@ export default Vue.extend({
 
     reloadApp() {
       this.$api.reloadApp().then(() => {
-        this.$utils.toast('Reloading app ...');
+        this.$utils.toast('Updating Settings...');
 
         // Poll until there's a 200 response, waiting for the app
         // to restart and come back up.
         const pollId = setInterval(() => {
           this.$api.getHealth().then(() => {
             clearInterval(pollId);
-            document.location.reload();
+            window.location.reload();
           });
         }, 500);
       });
