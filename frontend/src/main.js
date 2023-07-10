@@ -32,7 +32,7 @@ async function initConfig() {
 
     const to = router.history.current;
     const t = to.meta.title ? `${i18n.tc(to.meta.title, 0)} /` : 'Dashboard';
-    document.title = `${t} Rafik Hariri University`;
+    document.title = `${t} RHU`;
 
     api.getSettings();
 
@@ -64,7 +64,7 @@ router.beforeEach((to, from, next) => {
 router.afterEach((to) => {
   Vue.nextTick(() => {
     const t = to.meta.title && i18n.te(to.meta.title) ? `${i18n.tc(to.meta.title, 0)} |` : 'Dashboard |';
-    document.title = `${t} Rafik Hariri University`;
+    document.title = `${t} RHU`;
   });
 });
 
