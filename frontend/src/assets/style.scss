@@ -153,7 +153,7 @@ section {
     display: none;
   }
   .full {
-    max-height: 17px;
+    max-height: 30px;
     margin-top: 15px;
   }
   .favicon {
@@ -608,13 +608,25 @@ body.is-noscroll {
 
 /* Dashboard */
 section.dashboard {
-  .title {
-    margin-bottom: 0.5rem;
+  .title:first-child {
+    color: $grey-dark;
   }
 
+  .title {
+    margin-bottom: 0.5rem;
+    color: $primary;
+  }
+  
   .title > .subtitle {
     font-size: medium;
   }
+
+  // icon colors
+  .title .icon {
+    color: $primary;
+  }
+
+
 
   .tile.notification {
     @extend .box;

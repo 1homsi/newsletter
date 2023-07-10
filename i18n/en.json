@@ -245,7 +245,7 @@
   "import.invalidMode": "Invalid mode",
   "import.invalidParams": "Invalid params: {error}",
   "import.invalidSubStatus": "Invalid subscription status",
-  "import.listSubHelp": "Lists to subscribe to.",
+  "import.listSubHelp": "Lists to add to.",
   "import.mode": "Mode",
   "import.overwrite": "Overwrite?",
   "import.overwriteHelp": "Overwrite name, attribs, subscription status of existing subscribers?",
