@@ -80,10 +80,10 @@
       </div>
     </div>
 
-    <hr />
+    <!-- <hr />
     <b-field :label="$t('settings.general.checkUpdates')" :message="$t('settings.general.checkUpdatesHelp')">
       <b-switch v-model="data['app.check_updates']" name="app.check_updates" />
-    </b-field>
+    </b-field> -->
 
     <hr />
     <b-field :label="$t('settings.general.language')" label-position="on-border" :addons="false">

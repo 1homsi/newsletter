@@ -14,8 +14,9 @@
         <navigation v-if="isMobile" :isMobile="isMobile" :activeItem="activeItem" :activeGroup="activeGroup"
           @toggleGroup="toggleGroup" @doLogout="doLogout" />
         <b-navbar-item v-else tag="div">
-          <a href="#" @click.prevent="doLogout">{{
-            $t('users.logout') }}</a>
+          <a href="#" @click.prevent="doLogout" class="logout-item">
+            {{ $t('users.logout') }}
+          </a>
         </b-navbar-item>
       </template>
     </b-navbar>
