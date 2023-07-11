@@ -45,10 +45,10 @@
               {{ $t('settings.restart') }}
             </b-button>
           </div>
-          <div v-if="serverConfig.update" class="notification is-success">
+          <!-- <div v-if="serverConfig.update" class="notification is-success">
             {{ $t('settings.updateAvailable', { version: serverConfig.update.version }) }}
             <a :href="serverConfig.update.url" target="_blank">View</a>
-          </div>
+          </div> -->
         </div>
 
         <router-view :key="$route.fullPath" />
@@ -110,7 +110,7 @@ export default Vue.extend({
         const pollId = setInterval(() => {
           this.$api.getHealth().then(() => {
             clearInterval(pollId);
-            window.location.reload();
+            document.location.reload();
           });
         }, 500);
       });

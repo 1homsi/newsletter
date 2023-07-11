@@ -5,7 +5,7 @@
       <header class="columns page-header">
         <div class="column is-half">
           <h1 class="title is-4">{{ $t('settings.title') }}
-            <span class="has-text-grey-light">({{ serverConfig.version }})</span>
+            <!-- <span class="has-text-grey-light">({{ serverConfig.version }})</span> -->
           </h1>
         </div>
         <div class="column has-text-right">

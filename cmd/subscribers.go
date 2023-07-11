@@ -147,7 +147,7 @@ func handleExportSubscribers(c echo.Context) error {
 
 	h.Set(echo.HeaderContentType, echo.MIMEOctetStream)
 	h.Set("Content-type", "text/csv")
-	h.Set(echo.HeaderContentDisposition, "attachment; filename="+"audience.csv")
+	h.Set(echo.HeaderContentDisposition, "attachment; filename="+"subscribers.csv")
 	h.Set("Content-Transfer-Encoding", "binary")
 	h.Set("Cache-Control", "no-cache")
 	wr.Write([]string{"uuid", "email", "name", "attributes", "status", "created_at", "updated_at"})

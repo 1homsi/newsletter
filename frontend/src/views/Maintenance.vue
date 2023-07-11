@@ -11,7 +11,7 @@
       <h4 class="is-size-5">{{ $t('globals.terms.subscribers') }}</h4><br />
       <div class="columns">
         <div class="column is-4">
-          <b-field label="Data" message="$t('maintenance.orphanHelp')">
+          <b-field label="Data">
             <b-select v-model="subscriberType" expanded>
               <option value="orphan">{{ $t('dashboard.orphanSubs') }}</option>
               <option value="blocklisted">{{ $t('subscribers.status.blocklisted') }}</option>
@@ -21,8 +21,8 @@
         <div class="column is-5"></div>
         <div class="column">
           <b-field label=".">
-            <b-button class="is-primary" :loading="loading.maintenance"
-              @click="deleteSubscribers" expanded>{{ $t('globals.buttons.delete') }}</b-button>
+            <b-button class="is-primary" :loading="loading.maintenance" @click="deleteSubscribers" expanded>{{
+              $t('globals.buttons.delete') }}</b-button>
           </b-field>
         </div>
       </div>
@@ -40,10 +40,7 @@
         </div>
         <div class="column is-4">
           <b-field :label="$t('maintenance.olderThan')">
-            <b-datepicker
-              v-model="subscriptionDate"
-              required expanded
-              icon="calendar-clock"
+            <b-datepicker v-model="subscriptionDate" required expanded icon="calendar-clock"
               :date-formatter="formatDateTime">
             </b-datepicker>
           </b-field>
@@ -51,8 +48,8 @@
         <div class="column is-1"></div>
         <div class="column">
           <b-field label=".">
-            <b-button class="is-primary" :loading="loading.maintenance"
-              @click="deleteSubscriptions" expanded>{{ $t('globals.buttons.delete') }}</b-button>
+            <b-button class="is-primary" :loading="loading.maintenance" @click="deleteSubscriptions" expanded>{{
+              $t('globals.buttons.delete') }}</b-button>
           </b-field>
         </div>
       </div>
@@ -72,10 +69,7 @@
         </div>
         <div class="column is-4">
           <b-field :label="$t('maintenance.olderThan')">
-            <b-datepicker
-              v-model="analyticsDate"
-              required expanded
-              icon="calendar-clock"
+            <b-datepicker v-model="analyticsDate" required expanded icon="calendar-clock"
               :date-formatter="formatDateTime">
             </b-datepicker>
           </b-field>
@@ -83,8 +77,8 @@
         <div class="column is-1"></div>
         <div class="column">
           <b-field label=".">
-            <b-button expanded class="is-primary" :loading="loading.maintenance"
-              @click="deleteAnalytics">{{ $t('globals.buttons.delete') }}</b-button>
+            <b-button expanded class="is-primary" :loading="loading.maintenance" @click="deleteAnalytics">{{
+              $t('globals.buttons.delete') }}</b-button>
           </b-field>
         </div>
       </div>

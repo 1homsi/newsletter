@@ -18,40 +18,6 @@
           <div class="tile">
             <div class="tile is-parent is-vertical relative">
               <b-loading v-if="isCountsLoading" active :is-full-page="false" />
-              <article class="tile is-child notification" data-cy="lists">
-                <div class="columns is-mobile">
-                  <div class="column is-6">
-                    <p class="title">
-                      <b-icon icon="format-list-bulleted-square" />
-                      {{ $utils.niceNumber(counts.lists.total) }}
-                    </p>
-                    <p class="is-size-6 has-text-grey">
-                      {{ $tc('globals.terms.list', counts.lists.total) }}
-                    </p>
-                  </div>
-                  <div class="column is-6">
-                    <ul class="no has-text-grey">
-                      <li>
-                        <label>{{ $utils.niceNumber(counts.lists.public) }}</label>
-                        {{ $t('lists.types.public') }}
-                      </li>
-                      <li>
-                        <label>{{ $utils.niceNumber(counts.lists.private) }}</label>
-                        {{ $t('lists.types.private') }}
-                      </li>
-                      <li>
-                        <label>{{ $utils.niceNumber(counts.lists.optinSingle) }}</label>
-                        {{ $t('lists.optins.single') }}
-                      </li>
-                      <li>
-                        <label>{{ $utils.niceNumber(counts.lists.optinDouble) }}</label>
-                        {{ $t('lists.optins.double') }}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </article><!-- lists -->
-
               <article class="tile is-child notification" data-cy="campaigns">
                 <div class="columns is-mobile">
                   <div class="column is-6">
@@ -76,6 +42,40 @@
                   </div>
                 </div>
               </article><!-- campaigns -->
+              <article class="tile is-child notification" data-cy="lists">
+                <div class="columns is-mobile">
+                  <div class="column is-6">
+                    <p class="title">
+                      <b-icon icon="format-list-bulleted-square" />
+                      {{ $utils.niceNumber(counts.lists.total) }}
+                    </p>
+                    <p class="is-size-6 has-text-grey">
+                      {{ $tc('globals.terms.list', counts.lists.total) }}
+                    </p>
+                  </div>
+                  <!-- <div class="column is-6">
+                    <ul class="no has-text-grey">
+                      <li>
+                        <label>{{ $utils.niceNumber(counts.lists.public) }}</label>
+                        {{ $t('lists.types.public') }}
+                      </li>
+                      <li>
+                        <label>{{ $utils.niceNumber(counts.lists.private) }}</label>
+                        {{ $t('lists.types.private') }}
+                      </li>
+                      <li>
+                        <label>{{ $utils.niceNumber(counts.lists.optinSingle) }}</label>
+                        {{ $t('lists.optins.single') }}
+                      </li>
+                      <li>
+                        <label>{{ $utils.niceNumber(counts.lists.optinDouble) }}</label>
+                        {{ $t('lists.optins.double') }}
+                      </li>
+                    </ul>
+                  </div> -->
+                </div>
+              </article><!-- lists -->
+
             </div><!-- block -->
 
             <div class="tile is-parent relative">
